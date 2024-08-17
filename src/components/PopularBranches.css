@@ -1,0 +1,185 @@
+/* PopularBranches.css */
+
+.popular-branches-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: white;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #ea3e3b;
+}
+
+.description {
+  color: black;
+  font-weight: 100;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* display: grid; */
+  /* grid-template-columns: repeat(300px, 1fr); */
+  padding: 0 100px;
+}
+
+.card {
+  margin-bottom: 50px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.price-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #326a36;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
+
+.rating {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #f1c40f;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+.save {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.save svg {
+  margin-right: 5px;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.profile-image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: absolute;
+  top: -30px;
+  left: 100px;
+}
+.imgicon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ea3e3b;
+  margin-right: 10px;
+}
+
+.tick-icon {
+  color: #34a853;
+  font-size: 1.2rem;
+  padding-top: 14px;
+}
+.luxury {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.more {
+  position: relative;
+  margin-left: 10px;
+  background-color: #ea3e3b;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 25px;
+  left: -10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.more:hover .tooltip {
+  display: block;
+}
+
+.right {
+  color: #34a853;
+}

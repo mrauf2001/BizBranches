@@ -1,0 +1,33 @@
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: url("your-background-image.jpg") no-repeat center center/cover;
+  background-blend-mode: overlay;
+  background-color: red;
+  padding: 50px 0;
+  color: white;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.icon-wrapper {
+  background-color: white;
+  color: red;
+  border-radius: 50%;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+.stat-item h2 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.stat-item p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
