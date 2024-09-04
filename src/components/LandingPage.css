@@ -1,6 +1,7 @@
 /* LandingPage.css */
 .landing-container {
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -12,6 +13,7 @@
 }
 
 .overlay {
+  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -26,6 +28,7 @@
   color: #fff;
   z-index: 2;
   max-width: 80vw;
+  display: inline-block;
 }
 
 h1 {
@@ -101,5 +104,24 @@ p {
 }
 
 .search-button:hover {
-  background-color: #0056b3;
+  background-color: blueviolet;
+}
+
+/* LandingPage.css */
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.landing-container.in-view {
+  opacity: 1;
 }

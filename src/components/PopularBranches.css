@@ -28,8 +28,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* display: grid; */
-  /* grid-template-columns: repeat(300px, 1fr); */
   padding: 0 100px;
 }
 
@@ -182,4 +180,14 @@ h3 {
 
 .right {
   color: #34a853;
+}
+
+/* PopularBranches.css */
+.popular-branches-section {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.popular-branches-section.in-view {
+  opacity: 1;
 }

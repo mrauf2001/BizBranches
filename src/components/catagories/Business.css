@@ -1,0 +1,177 @@
+.business-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  background-image: url("https://media.istockphoto.com/id/1809278772/vector/studio-background-empty-room-lilac-ombre-color-wall-and-flooring-studio-display-podium-with.jpg?s=612x612&w=0&k=20&c=W-eCHNxKbXvLebgGM09useL_z5TNCIGJvxfYjU_6cRU="); /* Add your background image */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  color: white;
+}
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin: 10px 0 0;
+}
+
+.contentt {
+  display: flex;
+  margin-top: 20px;
+}
+#business {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar {
+  width: 25%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  z-index: 9;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter input[type="text"],
+.filter select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.slider {
+  margin-bottom: 15px;
+}
+
+.slider label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.features label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.filter-btn {
+  padding: 10px;
+  background-color: #ea3e3b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.reset-btn {
+  padding: 10px;
+  background-color: #ddd;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-content {
+  width: 75%;
+  padding: 20px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.result-header select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content .price {
+  color: #ea3e3b;
+  font-weight: bold;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.rating {
+  background-color: #f0ad4e;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -45px;
+  left: 0px;
+}
+
+.save-btn {
+  background-color: #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cardbusiness {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Adjust the gap between the cards as needed */
+  max-width: 800px; /* Adjust the max-width to control the container's width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+@media (max-width: 600px) {
+  .cardbusiness {
+    grid-template-columns: 1fr; /* Stack the cards in a single column on smaller screens */
+  }
+}

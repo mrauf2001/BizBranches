@@ -1,10 +1,25 @@
 import React from "react";
 import "./PopularBranches.css";
 import { FaCheckCircle, FaPhone, FaHeart } from "react-icons/fa";
+import { useInView } from 'react-intersection-observer';
+import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 
 const PopularBranches = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handleCardClick = () => {
+    navigate('/healthy'); // Navigate to the Description component
+  };
+
   return (
-    <div className="popular-branches-section">
+    <div ref={ref} className={`popular-branches-section ${inView ? 'in-view' : ''}`}>
       <h2>
         Top & Popular <span className="highlight">Branches</span>
       </h2>
@@ -13,7 +28,7 @@ const PopularBranches = () => {
       </p>
       <div className="card-container">
         {[...Array(6)].map((_, index) => (
-          <div key={index} style={{width:'300px'}} className="card">
+          <div key={index} style={{width:'300px'}} className="card" onClick={handleCardClick}> {/* Add the onClick handler */}
             <div className="card-image">
               <img
                 src='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRlOlcwiMIqPtuoFlUGY9ur17IjfrYaOVhGpa59j7hSyFDj7u9N' // Replace with actual image paths

@@ -1,34 +1,6 @@
-// import React from "react";
-// import "./Navbar.css"; // Import the CSS file for styling
-
-// const Navbar = () => {
-//   return (
-//     <nav className="navbar">
-//       <div className="navbar-left">
-//         <img width="160" height="32" src="https://bizbranches.pk/wp-content/uploads/2020/01/logo-light-2.png" class="attachment-full size-full wp-image-1483" alt="" decoding="async"/>
-//       </div>
-//       <div className="navbar-center">
-//         <ul className="navbar-items">
-//           <li><a href="/">Home</a></li>
-//           <li><a href="/listings">Listings</a></li>
-//           <li><a href="/blogs">Blogs</a></li>
-//           <li><a href="/pages">Pages</a></li>
-//         </ul>
-//       </div>
-//       <div className="navbar-right">
-//         <a href="/signin">Sign In or Register</a>
-//         <a href="/add-listing" className="add-listing">+ Add Listing</a>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-
-
 import React, { useState } from "react";
 import "./Navbar.css";
+import { useNavigate, Link } from "react-router-dom";
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(null);
@@ -40,25 +12,30 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     setDropdown(null);
   };
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handleClick = () => {
+
+    navigate ('/')
+  }
+  const formClick = () => {
+
+    navigate ('/form')
+  }
+  const pricingCardClick = () => {
+
+    navigate ('/add-listing"')
+  }
 
   return (
-    <nav className="navbar">
+    <nav className="navbar container">
       <div className="navbar-left">
       <img width="160" height="32" src="https://bizbranches.pk/wp-content/uploads/2020/01/logo-light-2.png" class="attachment-full size-full wp-image-1483" alt="" decoding="async"/>
       </div>
       <div className="navbar-center">
         <ul className="navbar-items">
           <li onMouseEnter={() => handleMouseEnter("home")} onMouseLeave={handleMouseLeave}>
-            <a href="/">Home</a>
-            {dropdown === "home" && (
-              <ul className="dropdown">
-                <li><a href="/home1">Home 1</a></li>
-                <li><a href="/home2">Home 2</a></li>
-                <li><a href="/home3">Home 3</a></li>
-                <li><a href="/home4">Home 4</a></li>
-                <li><a href="/home5">Home 5</a></li>
-              </ul>
-            )}
+            <Link onClick={handleClick} to ="/">Home</Link>
           </li>
           <li onMouseEnter={() => handleMouseEnter("listings")} onMouseLeave={handleMouseLeave}>
             <a href="/listings">Listings</a>
@@ -96,8 +73,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-right">
-        <a href="/signin">Sign In or Register</a>
-        <a href="/add-listing" className="add-listing">+ Add Listing</a>
+        <Link onClick={formClick} to="/form">Sign In or Register</Link>
+        <Link onClick={pricingCardClick} to="/add-listing" className="add-listing">+ Add Listing</Link>
       </div>
     </nav>
   );

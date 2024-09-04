@@ -1,0 +1,44 @@
+/* General styling for the map container */
+.listing-map {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Title styling */
+.widget-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Top navigation styling */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.direction-map {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.direction-map i {
+  margin-right: 8px;
+}
+
+.direction-map.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Map container styling */
+.map {
+  height: 400px; /* Adjust height as needed */
+  width: 100%;
+  background-color: #e5e5e5; /* Light grey background */
+  border: 1px solid #ccc; /* Border for the map */
+}
